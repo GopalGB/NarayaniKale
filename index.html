@@ -1342,6 +1342,89 @@ button:hover ~ .custom-cursor {
     justify-content: center;
   }
 }
+
+/* About Section Mobile Optimizations */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr; /* Stack content vertically */
+    gap: 30px; /* Reduce gap between elements */
+    padding: 20px 15px; /* Add some padding */
+  }
+
+  .about-image {
+    width: 100%; /* Full width */
+    max-width: 350px; /* Limit maximum width */
+    height: 400px; /* Reduce height */
+    margin: 0 auto 20px; /* Center image and add bottom margin */
+    order: -1; /* Move image to top on mobile */
+  }
+
+  .about-text {
+    padding: 20px; /* Reduce padding */
+    text-align: center; /* Center text */
+  }
+
+  .about-text p {
+    font-size: 1rem; /* Slightly smaller font */
+    padding-left: 15px; /* Reduce left padding */
+    margin-bottom: 1rem; /* Reduce margin */
+  }
+
+  .experience-highlights {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 15px; /* Reduce gap */
+  }
+
+  .highlight-card {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .highlight-number {
+    font-size: 2rem; /* Slightly smaller numbers */
+  }
+
+  .highlight-text {
+    font-size: 0.85rem; /* Slightly smaller text */
+  }
+
+  .section-title {
+    font-size: 2.5rem; /* Smaller title on mobile */
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Additional optimization for very small screens */
+@media (max-width: 480px) {
+  .about-content {
+    gap: 20px;
+    padding: 15px 10px;
+  }
+
+  .about-image {
+    max-width: 280px;
+    height: 350px;
+  }
+
+  .about-text {
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .highlight-card {
+    padding: 12px;
+  }
+}
+
+/* Add smooth transitions for better user experience */
+.about-content,
+.about-image,
+.about-text,
+.highlight-card {
+  transition: all 0.3s ease;
+}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
